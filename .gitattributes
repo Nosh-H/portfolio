@@ -1,1 +1,12 @@
-* text eol=lf
+* text=auto
+
+# Treat common binary image formats as binary to avoid corruption
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.webp binary
+
+# SVGs are text-based and can be normalized
+*.svg text
