@@ -17,12 +17,10 @@ const projects: Project[] = [
     id: 'p1',
     slug: 'advanced-design-challenge',
     title: 'Advanced Design Challenge',
-    description:
-      'Designed and fabricated a payload analyzer, drone manipulator, and stand.',
+    description: 'Designed and fabricated a payload analyzer, drone manipulator, and stand.',
     longDescription: `My partner and I designed and fabricated a payload color analyzer, manipulator, and physical platforms. We iterated multiple CAD designs, conducted field tests of 3D prints and the integrated electronics with LEDs and a buzzer. We featured the lightest mechanical setup, second-lowest electronics cost, and were a finalist in the double-elimination tournament.`,
     tech: ['Electrical Engineering', 'Arduino', 'CAD', '3D Printing'],
-    repoLink:
-      'https://github.com/Noah-H3467/Advanced-Design-Challenge',
+    repoLink: 'https://github.com/Noah-H3467/Advanced-Design-Challenge',
     image: 'images/ADC.jpg',
     date: '2025-12.5',
     status: 'completed',
