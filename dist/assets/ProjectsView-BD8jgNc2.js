@@ -1,1 +1,0 @@
-import{d as s,c as o,a as t,f as a,u as r,p as c,P as n,o as p,_ as l}from"./index-NAHvTdu2.js";const _=s({__name:"ProjectsView",setup(u){return(d,e)=>(p(),o("main",null,[e[0]||(e[0]=t("section",{class:"projects-hero"},null,-1)),a(n,{projects:r(c)},null,8,["projects"])]))}}),f=l(_,[["__scopeId","data-v-2d423199"]]);export{f as default};
