@@ -56,3 +56,30 @@ npm run build
 ```sh
 npm run lint
 ```
+### Deploy instructions
+1. Make changes. Ensure images are in the images and the public/images folders.
+2. Delete the old local dist folder, then build the website in the dist folder:
+```sh
+npm run build
+```
+3. Allow dist to be tracked this once by git
+```sh
+git add dist -f
+```
+4. Commit to the branch (i.e. main)
+```sh
+git commit -m "adding dist or some other message"
+```
+5. Delete the previous website on the Github Pages branch
+```sh 
+git push origin --delete gh-pages
+```
+6. Specifically push the updated dist folder to the Github Pages branch
+```sh
+git subtree push --prefix dist origin gh-pages
+``` 
+7. To delete the commit with dist from the regular branch, not the gh-pages branch, run:
+```sh
+git reset --hard HEAD~1
+```
+Note to self: combine into one command!
