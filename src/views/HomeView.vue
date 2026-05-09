@@ -20,7 +20,7 @@ const BASE = import.meta.env.BASE_URL
             <RouterLink to="/about" class="cta-button secondary">About Me</RouterLink>
             <a
             class="cta-button secondary"
-              href="https://github.com/Noah-H3467"
+              href="https://github.com/Nosh-H"
               target="_blank"
               rel="noopener"
             >

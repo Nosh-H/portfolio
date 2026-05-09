@@ -24,36 +24,67 @@ const BASE = import.meta.env.BASE_URL
       </div>
     </section>
 
-    <article class="news-item">
-      <h3>The Advanced Design Challenge</h3>
-      <div class="date">Published: 21 December 2025</div>
-        <img
-        :src="BASE + 'images/ADC_2.jpg'"
-        alt="LED on a perfboard lit up, connected to a computer and nestled underneath a thin 3D-printed disk."
-        class="news-image"
-      />
-      <p>I've recently finished a partner project this December: a solution for my Engineering Capstone's semester 1 'Advanced Design Challenge'.</p>
-      <p>
-        The 'analyzer' portion contains a standard USB (5VDC, 0.5A) external power access, a visible blinking red LED when powered, and a visible, color-matched LED + audible buzzer notification when a drone-delivered payload is identified.
-        My two-person team, 'Obi-Wan Droneobi' featured the lightest mechanical setup, second-lowest electronics cost, and was one of two finalist teams in the competition.</p>
-      <img
-        :src="BASE + 'images/ADC_In_Progress.jpg'"
-        alt="In progress"
-        class="news-image"
-      />
-      <p>It was a satisfying experience iterating through CAD designs for 3D printed parts to accompish the challenge's specific tasks.
-        The project also gave me good exposure to using a perfboard, and debugging the circuit to get cost and weight down was several hours well spent and learned from.
-      </p>
-      <img
-        :src="BASE + 'images/ADC_With_Breadboard.jpg'"
-        alt="In progress"
-        class="news-image"
-      />
-    </article>
-
     <section class="news">
       <h2>News</h2>
       <div class="news-items">
+        <article class="news-item">
+          <h3>Into the Tank!</h3>
+          <div class="date">February 11, 2026 (Published: __ May 2026)</div>
+          <p> I created a product idea called “Flippy Music”, an affordable mechanical page turner for sheet music. It aims to solve the difficulty and frustration associated with turning a page while playing.
+            With a partner in my Capstone class, we successfully pitched the concept at our high school's 'Shark Tank'-style event, securing $100 from the 'Sharks' to build prototypes.</p>
+          <p>The concept for Flippy Music, as presented to the Sharks:</p>
+          <img
+            :src="BASE + 'images/FlippyMusicConcept.jpg'"
+            alt="The Flippy Music Concept: 3D printed structure on a music stand. Between two sets of lego rollers are sheets of music.."
+            class="news-image"
+          />
+          <p>After some iterations along the way, the Flippy Music team completed a full prototype on May 7.</p>
+
+          <p4>My specific contributions include:</p4>
+          <ul>
+            <li>Managing the team</li>
+            <li>Wiring together the Arduino board, motor shield, motor, pedal switch, and photointerrupter for page detection.</li>
+            <li>Developing C++ code to control the hardware. I implemented a state machine to allow for two control modes based on pedal and page-detection photointerrupter.
+              I chose to utilize PlatformIO to make a multi-file code structure and embedded systems development easier.
+            </li>
+          </ul>
+          <p></p>
+          <p>Here's what the electronics had looked like on April 22, when the breadboard setup was still in progress - we were working on motor control!</p>
+          <img
+            :src="BASE + 'images/FlippyMusicElectronicsInProgress.jpg'"
+            alt="The Flippy Music Concept: 3D printed structure on a music stand. Between two sets of lego rollers are sheets of music.."
+            class="news-image"
+          />
+          <p>Our next step is to make improvements through testing, diagnosis, and revision.</p>
+        </article>
+        <article class="news-item">
+          <h3>The Advanced Design Challenge</h3>
+          <div class="date">Published: 21 December 2025</div>
+            <img
+            :src="BASE + 'images/ADC_2.jpg'"
+            alt="LED on a perfboard lit up, connected to a computer and nestled underneath a thin 3D-printed disk."
+            class="news-image"
+          />
+          <p>Last December, I finished a partner project: a solution for my Engineering Capstone's semester 1 'Advanced Design Challenge'.</p>
+          <p>
+            The 'analyzer' portion contains a standard USB (5VDC, 0.5A) external power access, a visible blinking red LED when powered, and a visible, color-matched LED + audible buzzer notification when a drone-delivered payload is identified.
+            My two-person team, 'Obi-Wan Droneobi' featured the lightest mechanical setup, second-lowest electronics cost, and was one of two finalist teams in the competition.</p>
+          <img
+            :src="BASE + 'images/ADC_In_Progress.jpg'"
+            alt="In progress"
+            class="news-image"
+          />
+          <p>It was a satisfying experience iterating through CAD designs for 3D printed parts to accompish the challenge's specific tasks.
+            The project also gave me good exposure to using a perfboard, and debugging the circuit to get cost and weight down was several hours well spent and learned from.
+          </p>
+          <img
+            :src="BASE + 'images/ADC_With_Breadboard.jpg'"
+            alt="In progress"
+            class="news-image"
+          />
+        </article>
+
+
         <article class="news-item">
           <h3>Trebuchet Day, 2025</h3>
           <div class="date">Published: 8 November 2025</div>

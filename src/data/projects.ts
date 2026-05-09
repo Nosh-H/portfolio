@@ -20,7 +20,7 @@ const projects: Project[] = [
     description: 'Designed and fabricated a payload analyzer, drone manipulator, and stand.',
     longDescription: `My partner and I designed and fabricated a payload color analyzer, manipulator, and physical platforms. We iterated multiple CAD designs, conducted field tests of 3D prints and the integrated electronics with LEDs and a buzzer. We featured the lightest mechanical setup, second-lowest electronics cost, and were a finalist in the double-elimination tournament.`,
     tech: ['Electrical Engineering', 'Arduino', 'CAD', '3D Printing'],
-    repoLink: 'https://github.com/Noah-H3467/Advanced-Design-Challenge',
+    repoLink: 'https://github.com/Nosh-H/Advanced-Design-Challenge',
     image: 'images/ADC.jpg',
     date: '2025-12.5',
     status: 'completed',
@@ -67,7 +67,7 @@ const projects: Project[] = [
   {
     id: 'p5',
     slug: 'w8-lib',
-    title: 'W8 Library',
+    title: 'W8 Library - pre-2026 season',
     description:
       'Since its inception in 2024, the W8 Library is a robot code template to accelerate our in-season development process, allowing us to focus more on game and robot-specific features.',
     longDescription: `As a member of the Windham Windup (Team 3467) software subteam, I contributed features including automatic robot path generation, servo motor boilerplate code, and unit testing for mechanisms in addition to reviewing other upgrades. W8 has helped prepare us for the 2026 FIRST Robotics Competition season.`,
@@ -75,7 +75,7 @@ const projects: Project[] = [
     repoLink: 'https://github.com/WHS-FRC-3467/W8-Library',
     image: 'images/W8.png',
     date: '2025-12.5',
-    status: 'in-progress',
+    status: 'completed',
   },
   {
     id: 'p6',
@@ -84,8 +84,8 @@ const projects: Project[] = [
     description:
       'A web-based tool for calculating Grade Point Averages. Includes the grade weighting at my school.',
     tech: ['HTML', 'CSS', 'JavaScript'],
-    link: 'https://noah-h3467.github.io/N-N-GPA-Calculator/',
-    repoLink: 'https://github.com/Noah-H3467/N-N-GPA-Calculator',
+    link: 'https://Nosh-H.github.io/N-N-GPA-Calculator/',
+    repoLink: 'https://github.com/Nosh-H/N-N-GPA-Calculator',
     image: 'images/GPACalculator.png',
     date: '2025-03',
     status: 'completed',

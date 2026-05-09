@@ -2,7 +2,7 @@
 
 Welcome to my professional portfolio website! This modern, interactive showcase of my work and skills is built with Vue 3 and TypeScript, leveraging the power of Vite for an optimized development experience. The site features a responsive design, smooth navigation, and a collection of my latest projects.
 
-**[View Live Portfolio](https://noah-h3467.github.io/portfolio/)**
+**[View Live Portfolio](https://Nosh-H.github.io/portfolio/)**
 
 ## Tech Stack
 
