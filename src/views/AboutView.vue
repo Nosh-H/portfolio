@@ -29,7 +29,7 @@ const BASE = import.meta.env.BASE_URL
       <div class="news-items">
         <article class="news-item">
           <h3>Into the Tank!</h3>
-          <div class="date">February 11, 2026 (Published: __ May 2026)</div>
+          <div class="date">February 11, 2026 (Published: 9 May 2026)</div>
           <p> I created a product idea called “Flippy Music”, an affordable mechanical page turner for sheet music. It aims to solve the difficulty and frustration associated with turning a page while playing.
             With a partner in my Capstone class, we successfully pitched the concept at our high school's 'Shark Tank'-style event, securing $100 from the 'Sharks' to build prototypes.</p>
           <p>The concept for Flippy Music, as presented to the Sharks:</p>
