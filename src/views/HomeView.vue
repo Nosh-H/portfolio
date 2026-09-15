@@ -12,7 +12,7 @@ const BASE = import.meta.env.BASE_URL
         <div class="hero-text">
           <h1>Welcome!</h1>
           <h3>
-            I'm Noah Haskell, a high school student greatly inspired by the applications of electrical
+            I'm Noah Haskell, an undergraduate student greatly inspired by the applications of electrical
           engineering, computer science, and robotics!
           </h3>
           <div class="hero-cta">
@@ -92,7 +92,7 @@ const BASE = import.meta.env.BASE_URL
 .cta-button {
   display: inline-block;
   padding: 1rem 2rem;
-  border-radius: 5px;
+
   font-weight: 500;
   text-decoration: none;
   transition: all 0.2s ease;
@@ -117,7 +117,7 @@ const BASE = import.meta.env.BASE_URL
   width: 100%;
   max-width: 500px;
   height: auto;
-  border-radius: 6px;
+
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 

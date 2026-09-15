@@ -134,7 +134,7 @@ h1 {
 
 .status {
   padding: 0.25rem 0.5rem;
-  border-radius: 4px;
+
   font-size: 0.875rem;
 }
 
@@ -156,7 +156,7 @@ h1 {
 .hero-image {
   width: 100%;
   height: auto;
-  border-radius: 6px;
+
   margin-bottom: 2rem;
 }
 
@@ -183,7 +183,7 @@ h1 {
 .tech-list li {
   background: var(--color-background-soft);
   padding: 0.5rem 1rem;
-  border-radius: 4px;
+
 }
 
 .links {
@@ -195,7 +195,7 @@ h1 {
 .button {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 6px;
+
   text-decoration: none;
   font-weight: 500;
   transition: all 0.2s ease;

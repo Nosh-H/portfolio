@@ -71,7 +71,7 @@ const imageSrc = computed(() => {
 .project-card article {
   padding: 1rem;
   border: 1px solid var(--color-border);
-  border-radius: 5px;
+
   background: var(--color-surface);
   height: 100%;
   display: flex;
@@ -87,7 +87,6 @@ const imageSrc = computed(() => {
 .image-container {
   margin: -1rem -1rem 1rem;
   overflow: hidden;
-  border-radius: 5px 5px 0 0;
 }
 
 .image-container img {
@@ -144,13 +143,13 @@ h2 {
   font-size: 0.85rem;
   background: var(--color-background-soft);
   padding: 0.25rem 0.5rem;
-  border-radius: 3px;
+
 }
 
 .status {
   font-size: 0.875rem;
   padding: 0.25rem 0.5rem;
-  border-radius: 3px;
+
   align-self: flex-start;
 }
 

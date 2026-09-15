@@ -12,7 +12,7 @@ const BASE = import.meta.env.BASE_URL
         <div class="hero-text">
           <h1>Hello there!</h1>
           <p class="lead">
-            I'm Noah Haskell, a high school student greatly inspired by the applications of electrical
+            I'm Noah Haskell, an undergraduate student greatly inspired by the applications of electrical
             engineering, computer science, and robotics!
           </p>
           <p class="lead">
@@ -27,6 +27,46 @@ const BASE = import.meta.env.BASE_URL
     <section class="news">
       <h2>News</h2>
       <div class="news-items">
+
+        <article class="news-item">
+          <h3>The Second Annual Rocket Royale</h3>
+          <div class="date">June 2026</div>
+                    <img
+            :src="BASE + 'images/2026RocketLaunch.png'"
+            alt="Pressurized air pushes water out of a 2L bottle rocket"
+            class="news-image"
+          />
+          <p>We partnered up again in my school's casual Rocket Royale competition.</p>
+          <p>After the defeat in 2025, my friend and I built better bottle rockets to compete in Windham High School's first annual Rocket Royale! I was responsible for most of the designing and printing,
+              and we both sanded the PLA fins and nosecones. Though we had tested another fin design, we ended up basing our fins on the Universal Fin Can again, but made more modifications,
+              including to shrink the fin radius and thickness by a small factor to reduce drag - while maintaining stability and a gliding descent.</p>
+          <img
+            :src="BASE + 'images/2026Rocket.jpg'"
+            alt="Lightweight 3d print of fin can taped to bottle rocket."
+            class="news-image"
+          />
+          <p>The competition started very well for us. Our first launch matchup, our rocket veered sharply to the left during its descent, making the winner unclear.
+            However, upon closer inspection, our rocket was clearly further than the opponent, at nearly a hundred yards in front of the launchers.
+            Our second launch was absolutely phenomenal. We scored (the only 2026) home run: our rocket arced high, turned right to a degree, and soared over the soccer field fence and into the trees!
+            (It took some time to find it.)
+          </p>
+          <p>It went downhill from there. The rocket misfired in the third round, ending our run in the upper bracket. We proceeded to test the rocket,
+            and we concluded that something about the previous launch made it unable to properly attach to the launcher - so we swapped out the bottle, and tested that.</p>
+          <p>That meant that we had to use a slightly inferior rocket for the fourth round. We readied it up, and at launch time, we noticed the launch sound was a little bit softer, which indicated a slight misfire.
+            As the rocket sailed above the football field, it was apparent that the rocket was not as high. It descended a bit prematurely, ending our run in Rocket Royale.
+            Even though it did not go as we had hoped, we were proud of our iterations prior to the day, with test shots making it to the end zone, and our legendary second round.
+          </p>
+          <p>In light of our last-minute decoration rocket entry last year, we made sure to make our homemade decoration bottle rocket earlier.
+              Our of popsicle sticks, paper-mache, cardboard, silver paint, and the damaged 2025 soda bottle, we made (and launched for fun) an Imperial Star Destroyer-themed rocket.
+          </p>
+          <img
+            :src="BASE + 'images/ISD.jpg'"
+            alt="Replica of a Star Destroyer (from Star Wars) consisting of a bottle wrapped in cardboard, popsicle sticks, paper-mache, and a 3D printed bridge."
+            class="news-image"
+          />
+          <p>But alas, it turns out that the decoration judges were not as big Star Wars fans as we hoped, and so we walked away empty handed.</p>
+        </article>
+
         <article class="news-item">
           <h3>Into the Tank!</h3>
           <div class="date">February 11, 2026 (Published: 9 May 2026)</div>
@@ -209,8 +249,7 @@ const BASE = import.meta.env.BASE_URL
           during the 'official' shots (two even went backwards), our treb successfully launched projectiles inside the castle during numerous test fires.
           All in all, it was a fun project, and I will soon work on the CAD for the next attempt.
           </p>
-          <p>For more lore, check out the tech binder:</p>
-          <iframe class="gdocs" src="https://docs.google.com/document/d/1DbmVeFThQRjT05UuAJeUSKFJ_ctIGrzOztfoiEpfnbs/edit?tab=t.0#heading=h.k2bg0it5mzu7/edit?embedded-true" width="640" height="718" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+          <p>For more lore, check out the <a href="https://drive.google.com/file/d/10ADqpuY5bA4JSLwulY-CBUUmUy0VMuJt/view">tech binder.</a></p>
           <img
             class="news-image-small"
             :src="BASE + 'images/20241024_170101.jpg'"
@@ -230,8 +269,6 @@ const BASE = import.meta.env.BASE_URL
           ball bearings at a mini replica of a physics teacher inside a mini cardboard castle. My group
           luckily succeeded in hitting the mini physics teacher, earning us bragging rights and a few extra points.
           </p>
-          <p>Check out my reflection for more information:</p>
-          <iframe class="gdocs" src="https://docs.google.com/document/d/1FAhwGbnmQz2meFrF-oPjRWaIsR3yMb8UiqvvApIrRVk/edit?tab=t.0/edit?embedded-true" width="640" height="718" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
           </article>
       </div>
@@ -256,8 +293,8 @@ const BASE = import.meta.env.BASE_URL
 .hero {
   text-align: center;
   padding: 4rem 0;
-  background: var(--color-background-soft);
-  border-radius: 5px;
+  /* background: var(--color-background-soft); */
+
   margin-bottom: 4rem;
 }
 
@@ -278,7 +315,7 @@ const BASE = import.meta.env.BASE_URL
   width: 100%;
   max-width: 500px;
   height: auto;
-  border-radius: 8px;
+
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   padding-left: 2rem;
 }
@@ -313,7 +350,7 @@ const BASE = import.meta.env.BASE_URL
 .news-item {
   background: var(--color-background-soft);
   padding: 2rem;
-  border-radius: 5px;
+
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -333,7 +370,7 @@ const BASE = import.meta.env.BASE_URL
   width: 100%;
   max-width: 800px;
   height: auto;
-  border-radius: 5px;
+
   margin: 1.5rem auto;
   display: block;
 }
@@ -342,7 +379,7 @@ const BASE = import.meta.env.BASE_URL
   width: 50%;
   max-width: 400px;
   height: auto;
-  border-radius: 5px;
+
   margin: 1.5rem auto;
   display: block;
 }

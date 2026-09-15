@@ -15,6 +15,19 @@ type Project = {
 const projects: Project[] = [
   {
     id: 'p1',
+    slug: 'platypus',
+    title: 'Perry and Platypus - FRC Robot Code',
+    description:
+      "Software engineering for FRC Team 3467's robots: award-winning 'Perry', and undefeated 'Platypus'.",
+    longDescription: `As a leader of the Windham Windup software subteam, I spearheaded features including no-vision fallback shot setpoints (including initial intake code and hub-shot agitation testing), dashboard-adjustable autonomous mode delay to outsmart opponent robots, fuel-in-hopper simulation, the HubState utility class to determine when to shoot or feed balls, and unit testing for mechanisms in addition to reviewing other upgrades. This codebase was built upon our open source W8-Library, which has helped prepare us for the 2026 FIRST Robotics Competition season.`,
+    tech: ['Java', 'WPILib', 'Github Projects'],
+    repoLink: 'https://github.com/WHS-FRC-3467/Skip-5.16-Perry',
+    image: 'images/Perry.png',
+    date: '2026-5',
+    status: 'completed',
+  },
+  {
+    id: 'p2',
     slug: 'advanced-design-challenge',
     title: 'Advanced Design Challenge',
     description: 'Designed and fabricated a payload analyzer, drone manipulator, and stand.',
@@ -26,7 +39,7 @@ const projects: Project[] = [
     status: 'completed',
   },
   {
-    id: 'p2',
+    id: 'p3',
     slug: 'floating-arm-trebuchet',
     title: 'Floating Arm Trebuchet',
     description:
@@ -40,11 +53,11 @@ const projects: Project[] = [
     status: 'completed',
   },
   {
-    id: 'p3',
+    id: 'p4',
     slug: 'gort-baja',
-    title: 'Baja and Gort - FRC Robots',
-    description: "Software engineering for FRC Team 3467's robots.",
-    longDescription: `As a member of the Windham Windup's (Team 3467) software subteam, I contributed key features to our 2025 robots "Gort" and "Baja". Some of my features include sensor fallback systems for robustness, an extended class to add custom functionality in robot control with an xbox controller, and automated pit testing. The robot successfully competed in the 2025 FIRST Robotics Competition season.`,
+    title: 'Baja and Gort - FRC Robot Code',
+    description: "Software engineering for FRC Team 3467's 2025 season robots.",
+    longDescription: `As a leader of the Windham Windup's (Team 3467) software subteam, I contributed key features to our 2025 robots "Gort" and "Baja", including sensor fallback systems for robustness, an extended class to add custom functionality in robot control with an xbox controller, and automated pit testing. The robot successfully competed in the 2025 FIRST Robotics Competition season.`,
     tech: ['Software Engineering', 'Java', 'WPILib & External Libraries'],
     repoLink: 'https://github.com/WHS-FRC-3467/Skip-5.15-Baja',
     image: 'images/baja.JPG',
@@ -52,7 +65,7 @@ const projects: Project[] = [
     status: 'completed',
   },
   {
-    id: 'p4',
+    id: 'p5',
     slug: 'whipper-trebuchet',
     title: 'Whipper Trebuchet',
     description:
@@ -62,19 +75,6 @@ const projects: Project[] = [
     link: 'https://www.youtube.com/watch?v=R_jejuOjgAE',
     image: 'images/WhipperTrebuchet.jpg',
     date: '2024-11',
-    status: 'completed',
-  },
-  {
-    id: 'p5',
-    slug: 'w8-lib',
-    title: 'W8 Library - pre-2026 season',
-    description:
-      'Since its inception in 2024, the W8 Library is a robot code template to accelerate our in-season development process, allowing us to focus more on game and robot-specific features.',
-    longDescription: `As a member of the Windham Windup (Team 3467) software subteam, I contributed features including automatic robot path generation, servo motor boilerplate code, and unit testing for mechanisms in addition to reviewing other upgrades. W8 has helped prepare us for the 2026 FIRST Robotics Competition season.`,
-    tech: ['Java', 'WPILib', 'Github Projects'],
-    repoLink: 'https://github.com/WHS-FRC-3467/W8-Library',
-    image: 'images/W8.png',
-    date: '2025-12.5',
     status: 'completed',
   },
   {
