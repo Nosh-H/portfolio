@@ -1,1 +1,0 @@
-import{d as e,c as s,f as t,u as o,p as c,P as a,o as r,_ as n}from"./index-JCkqWQU8.js";const p={class:"projects-page"},_=e({__name:"ProjectsView",setup(f){return(i,d)=>(r(),s("main",p,[t(a,{projects:o(c)},null,8,["projects"])]))}}),l=n(_,[["__scopeId","data-v-977ef6ea"]]);export{l as default};
