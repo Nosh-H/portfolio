@@ -1,17 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-
-type Project = {
-  id: string
-  slug: string
-  title: string
-  description: string
-  tech: string[]
-  link?: string
-  image?: string
-  date: string
-  status: 'completed' | 'in-progress' | 'archived'
-}
+import type { Project } from '../data/projects'
 
 const props = defineProps<{ project: Project }>()
 
@@ -48,10 +37,6 @@ const imageSrc = computed(() => {
 
         <p class="description">{{ props.project.description }}</p>
 
-        <ul class="tech">
-          <li v-for="t in props.project.tech" :key="t">{{ t }}</li>
-        </ul>
-
         <div class="status" :class="props.project.status">
           {{ props.project.status }}
         </div>
@@ -76,11 +61,12 @@ const imageSrc = computed(() => {
   height: 100%;
   display: flex;
   flex-direction: column;
+  box-shadow: var(--shadow-subtle);
 }
 
 .project-card:hover article {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(24, 43, 61, 0.14);
   border-color: var(--color-border-hover);
 }
 
@@ -91,7 +77,8 @@ const imageSrc = computed(() => {
 
 .image-container img {
   width: 100%;
-  height: 300px;
+  aspect-ratio: 16 / 10;
+  height: auto;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
@@ -117,6 +104,7 @@ h2 {
   margin: 0;
   font-size: 1.5rem;
   line-height: 1.2;
+  color: var(--color-heading);
 }
 
 .date {
@@ -128,22 +116,6 @@ h2 {
   flex: 1;
   margin: 0 0 1rem;
   color: var(--color-text-light);
-}
-
-.tech {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  margin: 0 0 1rem;
-}
-
-.tech li {
-  font-size: 0.85rem;
-  background: var(--color-background-soft);
-  padding: 0.25rem 0.5rem;
-
 }
 
 .status {

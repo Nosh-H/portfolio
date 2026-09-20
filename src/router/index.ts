@@ -30,7 +30,19 @@ const router = createRouter({
       path: '/projects/:slug',
       name: 'project-detail',
       component: () => import('../views/ProjectDetailView.vue'),
-      meta: { title: 'Projects - Noah Haskell'}
+      meta: { title: 'Project - Noah Haskell'}
+    },
+    {
+      path: '/resume',
+      name: 'resume',
+      component: () => import('../views/ResumeView.vue'),
+      meta: { title: 'Resumé - Noah Haskell' }
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: () => import('../views/ContactView.vue'),
+      meta: { title: 'Contact - Noah Haskell' }
     },
   ],
 })

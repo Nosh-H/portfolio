@@ -12,8 +12,8 @@ const BASE = import.meta.env.BASE_URL
         <div class="hero-text">
           <h1>Welcome!</h1>
           <h3>
-            I'm Noah Haskell, an undergraduate student greatly inspired by the applications of electrical
-          engineering, computer science, and robotics!
+            I'm Noah Haskell, an undergraduate student at the University of Michigan greatly inspired by the applications of electrical
+          engineering!
           </h3>
           <div class="hero-cta">
             <RouterLink to="/projects" class="cta-button">View My Projects</RouterLink>
@@ -29,16 +29,15 @@ const BASE = import.meta.env.BASE_URL
           </div>
         </div>
         <div class="hero-image">
-          <img :src="BASE + 'images/Myself.png'" alt="Noah Haskell" />
+          <img :src="BASE + 'images/Tree.jpg'" alt="A handsome young man in a green polo, khakis, with an arm leaning on a tree" />
         </div>
       </div>
     </section>
 
     <section class="featured-projects">
-      <h2>Featured Projects</h2>
       <ProjectList :projects="projects.slice(0, 3)" />
       <div class="view-all">
-        <RouterLink to="/projects" class="view-all-link">View All Projects &rarr;</RouterLink>
+        <RouterLink to="/projects" class="view-all-link">See more &rarr;</RouterLink>
       </div>
     </section>
   </main>
@@ -46,13 +45,13 @@ const BASE = import.meta.env.BASE_URL
 
 <style scoped>
 .home {
-  max-width: 1200px;
+  max-width: var(--content-width);
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0 var(--content-gutter) var(--section-gap);
 }
 
 .hero {
-  min-height: 80vh;
+  min-height: min(80vh, 800px);
   display: flex;
   align-items: center;
   padding: 4rem 0;
@@ -70,7 +69,7 @@ const BASE = import.meta.env.BASE_URL
 }
 
 .hero-text h1 {
-  font-size: 3.5rem;
+  font-size: clamp(3rem, 7vw, 5.25rem);
   color: var(--color-heading);
   margin-bottom: 1rem;
   line-height: 1.2;
@@ -86,6 +85,7 @@ const BASE = import.meta.env.BASE_URL
 
 .hero-cta {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
@@ -96,6 +96,7 @@ const BASE = import.meta.env.BASE_URL
   font-weight: 500;
   text-decoration: none;
   transition: all 0.2s ease;
+  border: 1px solid transparent;
 }
 
 .cta-button:not(.secondary) {
@@ -106,6 +107,7 @@ const BASE = import.meta.env.BASE_URL
 .cta-button.secondary {
   background: var(--color-background-soft);
   color: var(--color-text);
+  border-color: var(--color-border);
 }
 
 .cta-button:hover {
@@ -119,17 +121,11 @@ const BASE = import.meta.env.BASE_URL
   height: auto;
 
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--color-border);
 }
 
 .featured-projects {
   padding: 4rem 0;
-}
-
-.featured-projects h2 {
-  font-size: 2.5rem;
-  text-align: center;
-  margin-bottom: 3rem;
-  color: var(--color-heading);
 }
 
 .view-all {
@@ -199,5 +195,6 @@ const BASE = import.meta.env.BASE_URL
     width: 100%;
     text-align: center;
   }
+
 }
 </style>

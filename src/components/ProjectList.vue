@@ -1,19 +1,6 @@
 <script setup lang="ts">
-import type { PropType } from 'vue'
 import ProjectCard from './ProjectCard.vue'
-
-type Project = {
-  id: string
-  slug: string
-  title: string
-  description: string
-  tech: string[]
-  link?: string
-  repoLink?: string
-  image?: string
-  date: string
-  status: 'completed' | 'in-progress' | 'archived'
-}
+import type { Project } from '../data/projects'
 
 const props = defineProps<{ projects: Project[] }>()
 </script>

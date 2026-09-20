@@ -1,5 +1,11 @@
 <script setup lang="ts">
+import { ref } from 'vue'
+
 const BASE = import.meta.env.BASE_URL
+const selectedTopic = ref('all')
+
+const isTopicVisible = (topics: string[]) =>
+  selectedTopic.value === 'all' || topics.includes(selectedTopic.value)
 </script>
 
 <template>
@@ -12,10 +18,13 @@ const BASE = import.meta.env.BASE_URL
         <div class="hero-text">
           <h1>Hello there!</h1>
           <p class="lead">
-            I'm Noah Haskell, an undergraduate student greatly inspired by the applications of electrical
-            engineering, computer science, and robotics!
+            I am <strong>Noah Haskell</strong>, an Electrical Engineering undergraduate student at the University of Michigan, Ann Arbor.
           </p>
-          <p class="lead">
+          <p class="description">I’m especially interested in hardware design, embedded systems, testing, and controls, and product development.
+            I have experience with software development, robotics, electronics, and hands-on projects, and I’m looking for opportunities to keep building my skills on real engineering work.
+          </p>
+          <br>
+          <p class="description">
             In my free time, I like making coding and engineering projects, running,
             playing Magic: The Gathering, or simply picking up a nice book to read.
           </p>
@@ -24,11 +33,53 @@ const BASE = import.meta.env.BASE_URL
       </div>
     </section>
 
+    <section class="professional-intro">
+      <h2>Blog</h2>
+      <h4>View by topic:</h4>
+      <div class="topic-filters" aria-label="Filter blog posts by topic">
+        <button
+          type="button"
+          class="topic-button"
+          :class="{ active: selectedTopic === 'all' }"
+          :aria-pressed="selectedTopic === 'all'"
+          @click="selectedTopic = 'all'"
+        >
+          All
+        </button>
+        <button
+          type="button"
+          class="topic-button"
+          :class="{ active: selectedTopic === 'electrical' }"
+          :aria-pressed="selectedTopic === 'electrical'"
+          @click="selectedTopic = 'electrical'"
+        >
+          Microcontroller-based
+        </button>
+        <button
+          type="button"
+          class="topic-button"
+          :class="{ active: selectedTopic === 'trebuchets' }"
+          :aria-pressed="selectedTopic === 'trebuchets'"
+          @click="selectedTopic = 'trebuchets'"
+        >
+          Trebuchets!
+        </button>
+        <button
+          type="button"
+          class="topic-button"
+          :class="{ active: selectedTopic === 'rockets' }"
+          :aria-pressed="selectedTopic === 'rockets'"
+          @click="selectedTopic = 'rockets'"
+        >
+          Bottle rocket stuff
+        </button>
+      </div>
+    </section>
+
     <section class="news">
-      <h2>News</h2>
       <div class="news-items">
 
-        <article class="news-item">
+        <article v-show="isTopicVisible(['rockets'])" class="news-item">
           <h3>The Second Annual Rocket Royale</h3>
           <div class="date">June 2026</div>
                     <img
@@ -37,9 +88,10 @@ const BASE = import.meta.env.BASE_URL
             class="news-image"
           />
           <p>We partnered up again in my school's casual Rocket Royale competition.</p>
-          <p>After the defeat in 2025, my friend and I built better bottle rockets to compete in Windham High School's first annual Rocket Royale! I was responsible for most of the designing and printing,
-              and we both sanded the PLA fins and nosecones. Though we had tested another fin design, we ended up basing our fins on the Universal Fin Can again, but made more modifications,
-              including to shrink the fin radius and thickness by a small factor to reduce drag - while maintaining stability and a gliding descent.</p>
+          <p>After the defeat in 2025, my friend and I built better bottle rockets to compete in Windham High School's second annual Rocket Royale! I was responsible for most of the designing and printing,
+              and we both sanded the PLA fins and nosecones. Though we had tested another fin design, we ended up basing our fins on the Universal Fin Can (UFC) again, but made more modifications,
+              including to shrink the fin radius and thickness by a small factor to reduce drag - while maintaining stability and a gliding descent.
+              (We had also created other fin designs, testing flat eliptical, triangular shapes and a custom lightweight fin-can with cardboard wings, but performance was inferior to our best 2026 derivation of the UFC.)</p>
           <img
             :src="BASE + 'images/2026Rocket.jpg'"
             alt="Lightweight 3d print of fin can taped to bottle rocket."
@@ -67,7 +119,7 @@ const BASE = import.meta.env.BASE_URL
           <p>But alas, it turns out that the decoration judges were not as big Star Wars fans as we hoped, and so we walked away empty handed.</p>
         </article>
 
-        <article class="news-item">
+        <article v-show="isTopicVisible(['electrical'])" class="news-item">
           <h3>Into the Tank!</h3>
           <div class="date">February 11, 2026 (Published: 9 May 2026)</div>
           <p> I created a product idea called “Flippy Music”, an affordable mechanical page turner for sheet music. It aims to solve the difficulty and frustration associated with turning a page while playing.
@@ -80,7 +132,7 @@ const BASE = import.meta.env.BASE_URL
           />
           <p>After some iterations along the way, the Flippy Music team completed a full prototype on May 7.</p>
 
-          <p4>My specific contributions include:</p4>
+          <p>My specific contributions include:</p>
           <ul>
             <li>Managing the team</li>
             <li>Wiring together the Arduino board, motor shield, motor, pedal switch, and photointerrupter for page detection.</li>
@@ -97,7 +149,7 @@ const BASE = import.meta.env.BASE_URL
           />
           <p>Our next step is to make improvements through testing, diagnosis, and revision.</p>
         </article>
-        <article class="news-item">
+        <article v-show="isTopicVisible(['electrical'])" class="news-item">
           <h3>The Advanced Design Challenge</h3>
           <div class="date">Published: 21 December 2025</div>
             <img
@@ -125,7 +177,7 @@ const BASE = import.meta.env.BASE_URL
         </article>
 
 
-        <article class="news-item">
+        <article v-show="isTopicVisible(['trebuchets'])" class="news-item">
           <h3>Trebuchet Day, 2025</h3>
           <div class="date">Published: 8 November 2025</div>
           <img
@@ -190,7 +242,7 @@ const BASE = import.meta.env.BASE_URL
           <p>All in all, the pre-planning and making a better trebuchet overall was crucial in our success on Trebuchet Day!</p>
         </article>
 
-        <article class="news-item">
+        <article v-show="isTopicVisible(['electrical'])" class="news-item">
           <h3>July 2025 update</h3>
           <div class="date">Published: 16 July 2025</div>
           <img
@@ -216,7 +268,7 @@ const BASE = import.meta.env.BASE_URL
           <p>And yes, I'll update the 'Rocket Royale' page...when I get to it.</p>
         </article>
 
-        <article class="news-item">
+        <article v-show="isTopicVisible(['rockets'])" class="news-item">
           <h3>The First Annual Rocket Royale</h3>
           <div class="date">May 2025</div>
                     <img
@@ -239,7 +291,7 @@ const BASE = import.meta.env.BASE_URL
 
         </article>
 
-        <article class="news-item" id="whipper_treb">
+        <article v-show="isTopicVisible(['trebuchets'])" class="news-item" id="whipper_treb">
           <h3>Trebuchet Day, 2024</h3>
           <div class="date">October 31, 2024</div>
           <iframe class="gdocs" width="840" height="504" frameborder="0" marginheight="0" marginwidth="0" src="https://www.youtube.com/embed/R_jejuOjgAE" allowfullscreen></iframe>
@@ -257,7 +309,7 @@ const BASE = import.meta.env.BASE_URL
           outer layer cracked, cast in the glow of the setting sun">
         </article>
 
-        <article class="news-item">
+        <article v-show="isTopicVisible(['trebuchets'])" class="news-item">
           <h3>Trebuchet Day, 2022</h3>
           <div class="date">October 31, 2022</div>
           <img
@@ -278,9 +330,9 @@ const BASE = import.meta.env.BASE_URL
 
 <style scoped>
 .about {
-  max-width: 1200px;
+  max-width: var(--content-width);
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0 var(--content-gutter) var(--section-gap);
 }
 
 /* Style for google docs and youtube embed */
@@ -296,6 +348,49 @@ const BASE = import.meta.env.BASE_URL
   /* background: var(--color-background-soft); */
 
   margin-bottom: 4rem;
+}
+
+.professional-intro {
+  border-top: 4px solid var(--color-primary);
+  margin: 0 0 var(--section-gap);
+  max-width: none;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.professional-intro h2 {
+  color: var(--color-heading);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1.15;
+  margin: 0.5rem 0 1rem;
+}
+
+.professional-intro h4 {
+  color: var(--color-heading);
+  margin: 1.5rem 0 0.75rem;
+}
+
+.topic-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  justify-content: center;
+}
+
+.topic-button {
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  cursor: pointer;
+  padding: 0.55rem 0.8rem;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.topic-button:hover,
+.topic-button.active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #ffffff;
 }
 
 .hero h1 {
@@ -348,10 +443,11 @@ const BASE = import.meta.env.BASE_URL
 }
 
 .news-item {
-  background: var(--color-background-soft);
-  padding: 2rem;
+  padding: 3rem 0;
+}
 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.news-item + .news-item {
+  border-top: 4px solid var(--color-primary);
 }
 
 .news-item h3 {

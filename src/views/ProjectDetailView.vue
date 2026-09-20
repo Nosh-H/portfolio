@@ -1,13 +1,12 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
-import projects from '@/data/projects'
+import { useRoute } from 'vue-router'
+import projects, { type Project } from '@/data/projects'
 
 const route = useRoute()
-const router = useRouter()
 const slug = route.params.slug as string
 
-const project = computed(() => projects.find((p) => p.slug === slug))
+const project = computed<Project | undefined>(() => projects.find((p) => p.slug === slug))
 
 const getImageUrl = (imagePath: string) => {
   const baseUrl = import.meta.env.BASE_URL
@@ -32,9 +31,6 @@ const getUrl = (url?: string) => {
   return url.startsWith('/') ? baseUrl + url.substring(1) : baseUrl + url
 }
 
-if (!project.value) {
-  router.push('/projects')
-}
 </script>
 <template>
   <main v-if="project" class="project-detail">
@@ -68,8 +64,10 @@ if (!project.value) {
           v-html="getLongDescriptionHtml(project.longDescription)"
         ></p>
 
-        <ul class="tech-list">
-          <li v-for="tech in project.tech" :key="tech">{{ tech }}</li>
+        <br>
+        <h4>Skills</h4>
+        <ul class="skills-list">
+          <li v-for="skills in project.skills" :key="skills">{{ skills }}</li>
         </ul>
 
         <div class="links">
@@ -95,11 +93,17 @@ if (!project.value) {
       </div>
     </article>
   </main>
+  <main v-else class="project-not-found">
+    <p class="eyebrow">Project archive</p>
+    <h1>Project not found</h1>
+    <p>The project you requested is not in the current portfolio archive.</p>
+    <router-link to="/projects" class="button primary">Browse all projects</router-link>
+  </main>
 </template>
 
 <style scoped>
 .project-detail {
-  max-width: 900px;
+  max-width: 980px;
   margin: 0 auto;
   padding: 2rem 1rem;
 }
@@ -123,7 +127,9 @@ header {
 
 h1 {
   margin: 0 0 1rem;
-  font-size: 2.5rem;
+  color: var(--color-heading);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.05;
 }
 
 .meta {
@@ -158,6 +164,7 @@ h1 {
   height: auto;
 
   margin-bottom: 2rem;
+  border: 1px solid var(--color-border);
 }
 
 .content {
@@ -171,7 +178,7 @@ h1 {
   margin-bottom: 2rem;
 }
 
-.tech-list {
+.skills-list {
   list-style: none;
   padding: 0;
   display: flex;
@@ -180,10 +187,9 @@ h1 {
   margin: 1rem 0 2rem;
 }
 
-.tech-list li {
-  background: var(--color-background-soft);
+.skills-list li {
   padding: 0.5rem 1rem;
-
+  border: 1px solid var(--color-border);
 }
 
 .links {
@@ -209,6 +215,28 @@ h1 {
 .button:not(.primary) {
   background: var(--color-background-soft);
   color: var(--color-text);
+}
+
+.project-not-found {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 6rem var(--content-gutter);
+}
+
+.project-not-found h1 {
+  margin-top: 0.5rem;
+}
+
+.project-not-found p:not(.eyebrow) {
+  margin: 1rem 0 2rem;
+}
+
+.eyebrow {
+  color: var(--color-primary);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .button:hover {

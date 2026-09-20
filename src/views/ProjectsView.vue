@@ -4,25 +4,16 @@ import projects from '@/data/projects'
 </script>
 
 <template>
-  <main>
-    <section class="projects-hero">
-    </section>
-
+  <main class="projects-page">
     <ProjectList :projects="projects" />
   </main>
 </template>
 
 <style scoped>
-.projects-hero {
-  margin-bottom: 1.5rem;
+.projects-page {
+  width: min(100%, var(--content-width));
+  margin: 0 auto;
+  padding: 3.5rem var(--content-gutter) var(--section-gap);
 }
 
-
-@media (min-width: 1024px) {
-  .projects-hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-}
 </style>
