@@ -18,14 +18,15 @@ const isTopicVisible = (topics: string[]) =>
         <div class="hero-text">
           <h1>Hello there!</h1>
           <p class="lead">
-            I am <strong>Noah Haskell</strong>, an Electrical Engineering undergraduate student at the University of Michigan, Ann Arbor.
+            I am <strong>Noah Haskell</strong>, an undergrad student at the University of Michigan greatly inspired by the applications of electrical
+          engineering!
           </p>
-          <p class="description">I’m especially interested in hardware design, embedded systems, testing, and controls, and product development.
-            I have experience with software development, robotics, electronics, and hands-on projects, and I’m looking for opportunities to keep building my skills on real engineering work.
+          <p class="description">I’m especially interested in hardware design, embedded systems, testing, controls, and product development.
+            I have experience with software engineering, robotics, and hands-on projects, and I’m looking for opportunities to keep building my skills on real engineering work.
           </p>
           <br>
           <p class="description">
-            In my free time, I like making coding and engineering projects, running,
+            In my free time, I like improving on my personal engineering projects, running,
             playing Magic: The Gathering, or simply picking up a nice book to read.
           </p>
 
@@ -71,7 +72,7 @@ const isTopicVisible = (topics: string[]) =>
           :aria-pressed="selectedTopic === 'rockets'"
           @click="selectedTopic = 'rockets'"
         >
-          Bottle rocket stuff
+          Bottle rocketry
         </button>
       </div>
     </section>
@@ -494,6 +495,22 @@ const isTopicVisible = (topics: string[]) =>
 
 .news-item a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .hero-image img {
+    max-width: 300px;
+    padding-left: 0;
+  }
+
+  .hero-text {
+    padding-right: 0;
+  }
 }
 
 @media (max-width: 768px) {

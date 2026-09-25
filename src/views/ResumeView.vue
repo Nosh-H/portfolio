@@ -71,7 +71,7 @@ const BASE = import.meta.env.BASE_URL
             <h3>Teaching Assistant - Windham High School</h3>
             <p class="muted">- Tutored students in Honors Precalculus and French II through individualized problem-solving guidance and review sessions.</p>
           </div>
-          <p>Fall 2024 - 2025</p>
+          <p>Fall 2024 - Spring 2025</p>
         </div>
       </section>
     </div>
@@ -83,8 +83,8 @@ const BASE = import.meta.env.BASE_URL
         <div class="experience-item">
           <div>
             <h3>B.S.E in Electrical Engineering - University of Michigan, Ann Arbor</h3>
-            <p class="muted">Pursuing an electrical engineering degree at the University of Michigan.
-              Courses include Introductory Programming & Data Structures (EECS 280), Intro to Solar Power and Wireless Systems (Engineering 100), Multivariable Calculus
+            <p class="muted">- Pursuing an electrical engineering degree at the University of Michigan.</p>
+            <p class="muted">- Courses include Intro. Programming & Data Structures (EECS 280), Intro Engineering: Solar Power and Wireless Systems, and Multivariable Calculus
             </p>
           </div>
           <p>Fall 2026 - Present</p>
@@ -92,13 +92,11 @@ const BASE = import.meta.env.BASE_URL
         <div class="experience-item">
           <div>
             <h3>Valedictorian - Windham High School</h3>
-            <p class="muted">- National Merit Scholarship</p>
-            <p class="muted">- U.S. Marine Corps Scholastic Excellence Award</p>
-            <p class="muted">- John Philip Sousa Band Award</p>
-            <p class="muted">- Tri State Math League Scholarship</p>
-            <p class="muted">Courses include AP Physics C (Mechanics and Electricity & Magnetism), Honors Engineering Capstone, AP Calculus</p>
+            <p class="muted">- Courses include AP Physics C (Mechanics and Electricity & Magnetism), Honors Engineering Capstone, AP Calculus BC, and AP Chemistry</p>
+            <p class="muted">- Recipient of the National Merit Scholarship, U.S. Marine Corps Scholastic Excellence Award,
+              John Philip Sousa Band Award, and the Tri State Math League Scholarship</p>
           </div>
-          <p>Fall 2022 - 2026</p>
+          <p>Fall 2022 - Spring 2026</p>
         </div>
       </section>
     </div>
@@ -119,28 +117,28 @@ const BASE = import.meta.env.BASE_URL
             <p class="muted">- Communicated autonomous software design to judges, contributing to the team earning two 2024 Autonomous Awards;
               team qualified for the FIRST World Championship 4 times since 2023.</p>
           </div>
-          <p>Fall 2022 - 2026</p>
+          <p>Fall 2022 - Spring 2026</p>
         </div>
         <div class="experience-item">
           <div>
             <h3>President and Saxophone Section Leader - Windham High School Bands</h3>
             <p class="muted">- Led officer meetings, coordinated events and communications, and taught saxophone sectional rehearsals, mentoring younger musicians.</p>
           </div>
-          <p>Fall 2022 - 2026</p>
+          <p>Fall 2022 - Spring 2026</p>
         </div>
         <div class="experience-item">
           <div>
             <h3>President (grade 12), Vice President (grade 11) - WHS Mu Alpha Theta</h3>
             <p class="muted">- Orchestrated meetings and local tutoring efforts. Led post-competition review. Re-established annual Pi Day celebration, and initiated an elementary school tutoring program.</p>
           </div>
-          <p>Fall 2024 - 2026</p>
+          <p>Fall 2024 - Spring 2026</p>
         </div>
         <div class="experience-item">
           <div>
             <h3>Varsity Mathlete - Windham High School Math Team</h3>
             <p class="muted">- Top league scorer in grades 11-12, led Windham to four 1st place finishes in the Tri-State Mathematics League, and captained the New Hampshire Naturals at ARML 2025.</p>
           </div>
-          <p>Fall 2022 - 2026</p>
+          <p>Fall 2022 - Spring 2026</p>
         </div>
       </section>
     </div>

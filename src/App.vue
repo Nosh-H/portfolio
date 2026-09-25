@@ -10,7 +10,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <div class="nav-links">
           <RouterLink to="/">Home</RouterLink>
           <RouterLink to="/projects">Projects</RouterLink>
-          <RouterLink to="/resume">Resume</RouterLink>
+          <RouterLink to="/resume">Resumé</RouterLink>
           <RouterLink to="/about">About</RouterLink>
           <RouterLink to="/contact">Contact</RouterLink>
         </div>
@@ -115,6 +115,10 @@ nav a {
 }
 
 @media (max-width: 768px) {
+  .site-title {
+    display: none;
+  }
+
   nav {
     flex-direction: column;
     gap: 1rem;
@@ -179,5 +183,17 @@ nav a {
 .social-link:hover {
   background: var(--color-primary);
   color: #ffffff;
+}
+
+@media (max-width: 480px) {
+  .site-footer .footer-nav {
+    flex-direction: row;
+    gap: 0.35rem 0.75rem;
+    padding: 0.5rem 0;
+  }
+
+  .footer-nav a {
+    font-size: 0.8rem;
+  }
 }
 </style>

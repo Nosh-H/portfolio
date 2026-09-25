@@ -12,8 +12,7 @@ const BASE = import.meta.env.BASE_URL
         <div class="hero-text">
           <h1>Welcome!</h1>
           <h3>
-            I'm Noah Haskell, an undergraduate student at the University of Michigan greatly inspired by the applications of electrical
-          engineering!
+            I'm Noah Haskell, an Electrical Engineering undergraduate student at the University of Michigan, Ann Arbor.
           </h3>
           <div class="hero-cta">
             <RouterLink to="/projects" class="cta-button">View My Projects</RouterLink>
